@@ -5,7 +5,7 @@ const connectToDatabase = async () => {
     try {
         await mongoose.connect(process.env.MONGO_URI, {
             tls: true,
-            tlsCAFile: './rds-combined-ca-bundle.pem',
+            tlsCAFile: './global-bundle.pem',
         });
 
         console.log('Connected to AWS DocumentDB');
